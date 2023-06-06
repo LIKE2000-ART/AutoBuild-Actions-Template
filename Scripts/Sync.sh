@@ -3,17 +3,17 @@
 # Thanks to 281677160 and TobKed
 
 # 上游仓库与分支, 按需修改
-INPUT_UPSTREAM_REPOSITORY=Hyy2001X/AutoBuild-Actions-Template
+INPUT_UPSTREAM_REPOSITORY=Hyy2001X/AutoBuild-Actions-BETA
 INPUT_UPSTREAM_BRANCH=master
 
 # 需要文件的同步列表, 按需修改
 Sync_List=(
-	# .github/workflows/*
-	# Configs/*
+	.github/workflows/*
+	Configs/*
 	CustomFiles/Depends/*
 	CustomFiles/Patches/*
 	CustomFiles/Kconfig/*
-	# Scripts/AutoBuild_DiyScript.sh
+	Scripts/AutoBuild_DiyScript.sh
 	Scripts/Sync.sh
 	Scripts/AutoBuild_Function.sh
 	LICENSE

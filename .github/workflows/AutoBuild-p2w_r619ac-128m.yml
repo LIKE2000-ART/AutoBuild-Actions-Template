@@ -152,7 +152,6 @@ jobs:
       run: |
         echo "Free space:"
         df -h
-        chmod +x Scripts/AutoBuild_*.sh
         chmod +x Scripts/Sync.sh
         cd openwrt
         if [ "${{ env.CACHE_ACCELERATE }}" == true ]
@@ -161,6 +160,7 @@ jobs:
         fi
         cp $GITHUB_WORKSPACE/Configs/$CONFIG_FILE .config
         source $GITHUB_WORKSPACE/Scripts/Sync.sh
+        chmod +x Scripts/AutoBuild_*.sh
         source $GITHUB_WORKSPACE/Scripts/AutoBuild_DiyScript.sh
         source $GITHUB_WORKSPACE/Scripts/AutoBuild_Function.sh
         make defconfig
